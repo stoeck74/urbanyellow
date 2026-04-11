@@ -1,0 +1,41 @@
+{
+  "project": {
+    "title": "urbanyellow",
+    "subtitle": "Une série photographique",
+    "year": 2026,
+    "author": "Cédric Stoecklin",
+    "intro": "Une série photographique sur les architectures contemporaines, où apparaît une figure féminine récurrente vêtue de jaune, ajoutée numériquement. Empruntée au motif romantique du Rückenfigur, elle est seuil et balance. Face à la raison géométrique du bâti, elle introduit la courbe, la douceur, l'organique, et rend ces espaces habitables à hauteur d'humain.",
+    "email": "hey@cedricstoecklin.fr"
+  },
+  "panels": [
+    { "images": [0,1,2,3,4,5,6,7] },
+    { "images": [8,9,10,11,12,13,14,15] },
+    { "images": [16,17,18,19,20,21,22,23] }
+  ],
+  "images": [
+    { "src": "/images/infini.jpg", "orientation": "landscape", "caption": "infini - 2020" },
+    { "src": "/images/envol.jpg", "orientation": "landscape", "caption": "l'envol - 2024" },
+    { "src": "/images/paix.jpg", "orientation": "landscape", "caption": "paix - 2022" },
+    { "src": "/images/convergence.jpg", "orientation": "landscape", "caption": "convergence - 2020" },
+    { "src": "/images/escalier.jpg", "orientation": "portrait", "caption": "escalier - 2023" },
+    { "src": "/images/denuit.jpg", "orientation": "portrait", "caption": "de nuit - 2021" },
+    { "src": "/images/z.jpg", "orientation": "landscape", "caption": "Z - 2021" },
+    { "src": "/images/passerelle.jpg", "orientation": "landscape", "caption": "passerelle - 2021" },
+    { "src": "/images/messe.jpg", "orientation": "portrait", "caption": "messe - 2026" },
+    { "src": "/images/acces.jpg", "orientation": "landscape", "caption": "acces - 2025" },
+    { "src": "/images/tiret.jpg", "orientation": "portrait", "caption": "tiret - 2022" },
+    { "src": "/images/orange.jpg", "orientation": "landscape", "caption": "orange - 2022" },
+    { "src": "/images/confrontation.jpg", "orientation": "portrait", "caption": "confrontation - 2023" },
+    { "src": "/images/passage.jpg", "orientation": "landscape", "caption": "passage - 2023" },
+    { "src": "/images/vague.jpg", "orientation": "landscape", "caption": "vague - 2022" },
+    { "src": "/images/courbes.jpg", "orientation": "portrait", "caption": "courbes - 2022" },
+    { "src": "/images/tour.jpg", "orientation": "landscape", "caption": "la tour - 2025" },
+    { "src": "/images/pointe.jpg", "orientation": "landscape", "caption": "pointe - 2022" },
+    { "src": "/images/stair.jpg", "orientation": "portrait", "caption": "/// - 2020" },
+    { "src": "/images/h.jpg", "orientation": "landscape", "caption": "h - 2023" },
+    { "src": "/images/bonbon.jpg", "orientation": "portrait", "caption": "bonbon - 2020" },
+    { "src": "/images/antenne.jpg", "orientation": "portrait", "caption": "antenne - 2021" },
+    { "src": "/images/galerie.jpg", "orientation": "portrait", "caption": "galerie - 2022" },
+    { "src": "/images/reflexion.jpg", "orientation": "landscape", "caption": "rélexion - 2021" }
+  ]
+}

@@ -1,0 +1,175 @@
+html { scroll-behavior: smooth; }
+body { padding-bottom: 72px; }
+
+.hero-line { display: inline-block; }
+.reveal { opacity: 0; }
+
+.masonry { column-count: 2; column-gap: 1rem; }
+@media (min-width: 768px)  { .masonry { column-count: 3; column-gap: 1.25rem; } }
+@media (min-width: 1280px) { .masonry { column-count: 4; column-gap: 1.5rem; } }
+.masonry-item { break-inside: avoid; margin-bottom: 1.5rem; display: block; }
+
+.scrollbar-hide { scrollbar-width: none; -ms-overflow-style: none; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+
+/* Timeline repliée : ~32px visibles, bouton toggle toujours cliquable */
+#timeline { transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); position: fixed; }
+#timeline-collapse {
+  position: relative; z-index: 2;
+  padding: 6px 12px; border-radius: 999px;
+  background: rgba(10,10,10,0.06);
+}
+#timeline.collapsed { transform: translateY(calc(100% - 32px)); }
+#timeline.collapsed > div > *:not(#timeline-collapse) { pointer-events: none; opacity: 0.35; }
+#timeline.collapsed #timeline-collapse { pointer-events: auto; }
+.timeline-thumb.is-active img { opacity: 1; }
+.timeline-thumb.is-active { outline: 1px solid #0a0a0a; outline-offset: 2px; }
+
+#lightbox.is-open { display: flex; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  html[data-mode="parcours"] { scroll-snap-type: none; }
+}
+
+::selection { background: #ffd60a; color: #0a0a0a; }
+
+/* =========================================================
+   MODE PARCOURS — Codrops Grid-to-Preview (clip-path cross)
+   ========================================================= */
+body[data-mode="parcours"] #timeline { z-index: 40; }
+
+/* En mode parcours : snap au scroll de PAGE, le hero et les 3 panels
+   sont 4 blocs 100vh qui s'enchaînent. */
+html[data-mode="parcours"] {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+body[data-mode="parcours"] {
+  /* le hero devient un panel snap */
+  padding-bottom: 0;
+}
+body[data-mode="parcours"] .hero-section {
+  height: 100vh;
+  min-height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+body[data-mode="parcours"] .site-footer {
+  height: 100vh;
+  min-height: 100vh;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* #mode-parcours = simple wrapper transparent dans le flow de page */
+#mode-parcours {
+  position: relative;
+  width: 100%;
+  background: #f5f3ef;
+}
+.parcours-panel {
+  position: relative;
+  width: 100%; height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  overflow: hidden;
+  background: #f5f3ef;
+}
+.parcours-grid {
+  position: absolute; inset: 0;
+  padding: 6vh 5vw 10vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.25rem;
+  z-index: 1;
+}
+@media (min-width: 1280px) { .parcours-grid { gap: 1.75rem; } }
+
+.product {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background: #f5f3ef;
+  aspect-ratio: 1 / 1;
+  align-self: center;
+  justify-self: center;
+  width: 100%; height: 100%;
+  margin: 0;
+  will-change: transform, opacity;
+}
+.product-thumb {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.product:hover .product-thumb { transform: scale(1.04); }
+
+/* --- Conteneurs preview : moitié G / moitié D, en absolute --- */
+.product-preview {
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 50%;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  background: #f5f3ef;
+  will-change: transform, opacity;
+}
+.product-preview.--left  { left: 0; }
+.product-preview.--right { right: 0; }
+
+.preview-stage {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  background: #f5f3ef;
+}
+.masked-preview {
+  position: absolute; inset: 0;
+  background: #f5f3ef;
+  z-index: 2;
+}
+.product-preview__images { display: none; }
+.preview-stage > .preview-img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: contain;
+  background: #f5f3ef;
+  z-index: 1;
+}
+
+.product-meta {
+  flex: 0 0 auto;
+  padding: 2vh 3vw 4vh;
+  background: #f5f3ef;
+  color: #0a0a0a;
+}
+.product-num {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(10, 10, 10, 0.5);
+  margin-bottom: 0.4rem;
+}
+.product-title {
+  font-size: clamp(1.4rem, 2.6vw, 2.4rem);
+  line-height: 1.05;
+  font-weight: 600;
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  html[data-mode="parcours"] { scroll-snap-type: none; }
+}
+
+::selection { background: #ffd60a; color: #0a0a0a; }

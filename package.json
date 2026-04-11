@@ -1,0 +1,14 @@
+{
+  "name": "urbanyellow",
+  "version": "1.0.0",
+  "description": "Portfolio graphique avec Node, EJS, Tailwind & GSAP",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
+}
