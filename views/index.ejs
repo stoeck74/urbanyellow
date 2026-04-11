@@ -3,9 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title><%= project.title %> — <%= project.author %></title>
-  <meta name="description" content="<%= project.intro %>" />
+  <title>URBAN YELLOW — Cédric Stoecklin, photographie d'architecture</title>
+<meta name="description" content="URBAN YELLOW, série photographique de Cédric Stoecklin : 24 fragments d'architectures contemporaines traversés par une figure jaune récurrente." /><meta name="author" content="Cédric Stoecklin" />
+<meta name="keywords" content="Cédric Stoecklin, urban yellow, photographie architecture, photographe Annecy, tirage pigmentaire, art contemporain" />
+<link rel="canonical" href="https://www.cedricstoecklin.com/" />
 
+<!-- Open Graph (Facebook, LinkedIn, iMessage, WhatsApp) -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="URBAN YELLOW — Cédric Stoecklin" />
+<meta property="og:description" content="Série photographique. 24 fragments d'architectures contemporaines traversés par une figure jaune récurrente." />
+<meta property="og:url" content="https://www.cedricstoecklin.com/" />
+<meta property="og:image" content="https://www.cedricstoecklin.com/images/og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:site_name" content="Cédric Stoecklin" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="URBAN YELLOW — Cédric Stoecklin" />
+<meta name="twitter:description" content="24 fragments d'architectures contemporaines traversés par une figure jaune récurrente." />
+<meta name="twitter:image" content="https://www.cedricstoecklin.com/images/og.jpg" />
+<!-- Favicon SVG inline, fond jaune + U noir -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+<!-- JSON-LD : aide Google à comprendre que c'est un artiste + une œuvre -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://www.cedricstoecklin.com/#person",
+      "name": "Cédric Stoecklin",
+      "birthDate": "1979",
+      "jobTitle": "Photographe",
+      "url": "https://www.cedricstoecklin.com/",
+      "email": "hey@cedricstoecklin.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Annecy",
+        "addressCountry": "FR"
+      },
+      "sameAs": ["https://www.instagram.com/cedricstoecklin"]
+    },
+    {
+      "@type": "VisualArtwork",
+      "name": "URBAN YELLOW",
+      "creator": { "@id": "https://www.cedricstoecklin.com/#person" },
+      "artform": "Photographie",
+      "artMedium": "Tirage pigmentaire sur papier Hahnemühle",
+      "dateCreated": "2020",
+      "description": "Recherche photographique autour de l'insertion d'une figure récurrente dans des architectures contemporaines. 24 pièces réalisées entre 2020 et 2026.",
+      "image": "https://www.cedricstoecklin.com/images/og.jpg",
+      "url": "https://www.cedricstoecklin.com/"
+    }
+  ]
+}
+</script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
