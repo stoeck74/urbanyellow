@@ -1,6 +1,15 @@
 // === urbanyellow — main.js ===
 gsap.registerPlugin(ScrollTrigger);
 
+
+document.addEventListener('contextmenu', (e) => {
+  if (e.target.tagName === 'IMG') {
+    e.preventDefault();
+  }
+});
+
+
+
 const IMAGES = JSON.parse(document.getElementById('images-data').textContent);
 const body = document.body;
 
