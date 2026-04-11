@@ -108,8 +108,8 @@ document.getElementById('mode-toggle').addEventListener('click', () => {
 
 let savedMode = null;
 try { savedMode = localStorage.getItem('mode'); } catch (e) {}
-if (savedMode === 'parcours' && !forceIndex) setMode('parcours');
-else setMode('index');
+if (savedMode === 'index' || forceIndex) setMode('index');
+else setMode('parcours');
 
 document.addEventListener('keydown', (e) => {
   if (lightbox.classList.contains('is-open')) {

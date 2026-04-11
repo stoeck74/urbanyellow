@@ -156,15 +156,117 @@
   </div>
 
   <!-- FOOTER -->
-  <footer class="site-footer border-t border-ink/10 mt-16 py-12 px-6 md:px-12 pb-24">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
-      <div>
-        <p class="font-display text-4xl md:text-6xl leading-none">Contact.</p>
-        <a href="mailto:<%= project.email %>" class="inline-block mt-6 text-lg underline underline-offset-4 hover:text-accent transition-colors"><%= project.email %></a>
+<footer class="site-footer border-t border-ink/10 px-6 md:px-12 py-16">
+  <div class="site-footer__inner max-w-[1800px] mx-auto w-full">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-14 text-sm leading-relaxed">
+
+      <!-- COL 1 : bio / démarche -->
+      <div class="space-y-8">
+        <div>
+          <p class="font-display text-xl font-semibold tracking-tight">CÉDRIC STOECKLIN</p>
+          <p class="text-ink/60 mt-1">Né en 1979, vit et travaille à Annecy</p>
+          <p class="mt-3">
+            <a href="https://www.cedricstoecklin.com" target="_blank" rel="noopener" class="underline underline-offset-4 decoration-ink/30 hover:decoration-accent">www.cedricstoecklin.com</a><br />
+            <a href="mailto:hey@cedricstoecklin.com" class="underline underline-offset-4 decoration-ink/30 hover:decoration-accent">hey@cedricstoecklin.com</a>
+          </p>
+        </div>
+
+        <div>
+          <p class="text-[10px] uppercase tracking-[0.2em] text-ink/50 mb-2">Démarche</p>
+          <p class="text-ink/80">
+            Développe depuis 2020 <span class="font-semibold">URBAN YELLOW</span>,
+            recherche photographique personnelle autour de l'insertion d'une
+            figure récurrente dans des architectures contemporaines.
+          </p>
+        </div>
+
+        <div>
+          <p class="text-[10px] uppercase tracking-[0.2em] text-ink/50 mb-2">Commande publique</p>
+          <p class="text-ink/80">
+            <span class="font-mono text-ink/50 mr-2">2022</span>Déclinaison territoriale de la série URBAN YELLOW, commande acquise par la Communauté d'agglomération Paris-Saclay.
+          </p>
+        </div>
+
+        <div>
+          <p class="text-[10px] uppercase tracking-[0.2em] text-ink/50 mb-2">Activité</p>
+          <p class="text-ink/80">
+            Photographe d'architecture et de design depuis 2019, Annecy.
+          </p>
+        </div>
       </div>
-      <p class="text-sm text-ink/50">© <%= project.year %> <%= project.author %></p>
+
+      <!-- COL 2 : liste des œuvres -->
+      <div>
+        <p class="text-[10px] uppercase tracking-[0.2em] text-ink/50 mb-4">Liste des œuvres</p>
+        <p class="text-ink/70 text-xs leading-relaxed">
+          Photographies, tirages pigmentaires sur papier Hahnemühle.
+          Édition de 13 + 2EA. Formats disponibles: 40×50 cm, 60x75 cm, 80×100 cm et 100x125 cm.
+        </p>
+        <ul class="mt-5 divide-y divide-ink/10 font-mono text-[11px] uppercase tracking-wider">
+          <li class="flex justify-between py-2"><span>L'envol</span><span class="text-ink/50">2024</span></li>
+          <li class="flex justify-between py-2"><span>Paix</span><span class="text-ink/50">2022</span></li>
+          <li class="flex justify-between py-2"><span>Convergence</span><span class="text-ink/50">2020</span></li>
+          <li class="flex justify-between py-2"><span>Messe</span><span class="text-ink/50">2026</span></li>
+          <li class="flex justify-between py-2"><span>Accès</span><span class="text-ink/50">2025</span></li>
+          <li class="flex justify-between py-2"><span>La tour</span><span class="text-ink/50">2025</span></li>
+          <li class="flex justify-between py-2"><span>H</span><span class="text-ink/50">2023</span></li>
+          <li class="flex justify-between py-2"><span>Passage</span><span class="text-ink/50">2023</span></li>
+          <li class="flex justify-between py-2"><span>Escalier</span><span class="text-ink/50">2023</span></li>
+          <li class="flex justify-between py-2"><span>Confrontation</span><span class="text-ink/50">2023</span></li>
+          <li class="flex justify-between py-2"><span>Courbes</span><span class="text-ink/50">2022</span></li>
+          <li class="flex justify-between py-2"><span>Galerie</span><span class="text-ink/50">2022</span></li>
+          <li class="flex justify-between py-2"><span>Orange</span><span class="text-ink/50">2022</span></li>
+          <li class="flex justify-between py-2"><span>Pointe</span><span class="text-ink/50">2022</span></li>
+          <li class="flex justify-between py-2"><span>Tiret</span><span class="text-ink/50">2022</span></li>
+          <li class="flex justify-between py-2"><span>Vague</span><span class="text-ink/50">2022</span></li>
+          <li class="flex justify-between py-2"><span>Antenne</span><span class="text-ink/50">2021</span></li>
+          <li class="flex justify-between py-2"><span>De nuit</span><span class="text-ink/50">2021</span></li>
+          <li class="flex justify-between py-2"><span>Passerelle</span><span class="text-ink/50">2021</span></li>
+          <li class="flex justify-between py-2"><span>Réflexion</span><span class="text-ink/50">2021</span></li>
+          <li class="flex justify-between py-2"><span>Z</span><span class="text-ink/50">2021</span></li>
+          <li class="flex justify-between py-2"><span>Bonbon</span><span class="text-ink/50">2020</span></li>
+          <li class="flex justify-between py-2"><span>Infini</span><span class="text-ink/50">2020</span></li>
+          <li class="flex justify-between py-2"><span>///</span><span class="text-ink/50">2020</span></li>
+        </ul>
+      </div>
+
+      <!-- COL 3 : colophon / acquisition -->
+      <div class="space-y-8">
+        <div>
+          <p class="text-[10px] uppercase tracking-[0.2em] text-ink/50 mb-2">Acquisition</p>
+          <p class="text-ink/80">
+            Tirages disponibles sur commande. Chaque pièce est livrée signée,
+            numérotée et accompagnée d'un certificat d'authenticité.
+          </p>
+          <a href="mailto:hey@cedricstoecklin.com?subject=URBAN%20YELLOW%20%E2%80%94%20demande%20de%20tirage" class="inline-block mt-4 text-xs uppercase tracking-widest border border-ink/20 px-4 py-2 rounded-full hover:bg-ink hover:text-paper transition-colors">
+            Demander un tirage →
+          </a>
+        </div>
+
+        <div>
+          <p class="text-[10px] uppercase tracking-[0.2em] text-ink/50 mb-2">Colophon</p>
+          <p class="text-ink/80">
+            Prises de vue réalisées au format numérique, 2020–2026.
+            Post-production numérique en insertion, tirages calibrés et réalisés en France.
+          </p>
+        </div>
+
+        <div>
+          <p class="text-[10px] uppercase tracking-[0.2em] text-ink/50 mb-2">Suivre</p>
+          <ul class="space-y-1">
+            <li><a href="https://www.instagram.com/cedricstoecklin_photographe/" class="underline underline-offset-4 decoration-ink/30 hover:decoration-accent">Instagram — @cedricstoecklin</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </footer>
+
+    <!-- Bas de footer -->
+    <div class="mt-12 pt-6 border-t border-ink/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-3 text-[11px] uppercase tracking-widest text-ink/50">
+      <span>© 2026 Cédric Stoecklin — Tous droits réservés</span>
+      <span>Urban Yellow — 24 fragments, 2020–2026</span>
+    </div>
+  </div>
+</footer>
 
   <script src="/js/main.js"></script>
 </body>
