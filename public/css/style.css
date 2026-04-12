@@ -148,22 +148,25 @@ body[data-mode="parcours"] .site-footer {
 
 .product-meta {
   flex: 0 0 auto;
-  padding: 2vh 3vw 4vh;
+  margin:auto;
+  padding: 2vh 0 5vh 0;
   background: #f5f3ef;
   color: #0a0a0a;
 }
 .product-num {
+  text-align: center;
   display: block;
-  font-size: 11px;
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: rgba(10, 10, 10, 0.5);
   margin-bottom: 0.4rem;
+  
 }
 .product-title {
-  font-size: clamp(1.4rem, 2.6vw, 2.4rem);
+  font-size: clamp(1.2rem, 2.2vw, 1.5rem);
   line-height: 1.05;
-  font-weight: 600;
+  font-weight: 500;
   margin: 0;
 }
 

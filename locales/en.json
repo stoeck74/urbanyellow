@@ -1,0 +1,70 @@
+{
+  "project": {
+    "title": "urbanyellow",
+    "subtitle": "A subjective vision of urban space",
+    "year": 2026,
+    "author": "Cédric Stoecklin",
+    "intro": "A photographic series on contemporary architecture, featuring a recurring female figure dressed in yellow, added digitally. Borrowed from the Romantic motif of the Rückenfigur, she acts as both threshold and balance. Faced with the geometric rationality of the buildings, she introduces curves, softness, and the organic, making these spaces habitable on a human scale.",
+    "email": "hey@cedricstoecklin.com"
+  },
+  "meta": {
+    "title": "URBAN YELLOW — Cédric Stoecklin",
+    "description": "Photographic series. 24 fragments of contemporary architecture crossed by a recurring yellow figure.",
+    "keywords": "Cédric Stoecklin, urban yellow, architectural photography, photographer Annecy, fine art print"
+  },
+  "og": {
+    "title": "URBAN YELLOW — Cédric Stoecklin",
+    "description": "Photographic series exploring contemporary architecture."
+  },
+  "twitter": {
+    "title": "URBAN YELLOW — Cédric Stoecklin",
+    "description": "24 fragments of contemporary architecture crossed by a recurring yellow figure."
+  },
+  "nav": {
+    "toggle": "Change display mode",
+    "index": "Classic layout",
+    "parcours": "interactive layout"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "hint": "Click to enlarge"
+  },
+  "timeline": {
+    "collapse": "Collapse"
+  },
+  "lightbox": {
+    "close": "Close",
+    "prev": "Previous",
+    "next": "Next"
+  },
+  "footer": {
+    "artist": {
+      "name": "CÉDRIC STOECKLIN",
+      "bio": "Born in 1979, lives and works in Annecy"
+    },
+    "sections": {
+      "approach": "Approach",
+      "public": "Public commission",
+      "activity": "Activity",
+      "works": "List of works",
+      "colophon": "Colophon",
+      "intent": "Artist statement",
+      "follow": "Follow",
+      "acquisition": "Acquisition"
+    },
+    "texts": {
+      "approach": "Develops URBAN YELLOW since 2020, a personal photographic research around the insertion of a recurring figure in contemporary architecture.",
+      "public": "Territorial variation of the URBAN YELLOW series, commissioned by Paris-Saclay agglomeration.",
+      "activity": "Architectural and design photographer since 2019, Annecy.",
+      "works_desc": "Photographs, pigment prints on Hahnemühle paper. Edition of 13 + 2AP. Available formats: 40×50 cm, 60x75 cm, 80×100 cm and 100x125 cm.",
+      "colophon": "Photographs produced digitally, 2020–2026. Digital compositing, calibrated and printed in France.",
+      "intent": "URBAN YELLOW is part of a contemporary photography attentive to the built environment. The series focuses on contemporary architectures, often brutalist or minimalist, chosen for their geometry and the way they shape light. The buildings are not documented but composed, framed, treated as subjects in themselves.\n\nWithin these architectures appears a recurring figure dressed in yellow, always the same, always alone, almost always seen from behind. She is not photographed but added: each image is a constructed composition. The figure borrows from the Rückenfigur motif, inherited from romantic painting, transposed here into contemporary architecture.\n\nHer presence introduces softness, curvature, something organic and alive. She does not oppose architecture; she tempers it and makes it inhabitable.",
+      "acquisition": "Prints available on request. Each piece is signed, numbered and comes with a certificate of authenticity.",
+      "cta": "Request a print →"
+    },
+    "bottom": {
+      "rights": "© 2026 Cédric Stoecklin — All rights reserved",
+      "series": "Urban Yellow — 24 fragments, 2020–2026"
+    }
+  }
+}

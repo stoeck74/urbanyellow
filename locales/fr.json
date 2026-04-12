@@ -1,0 +1,70 @@
+{
+  "project": {
+    "title": "urbanyellow",
+    "subtitle": "Un regard subjectif sur l'espace urbain",
+    "year": 2026,
+    "author": "Cédric Stoecklin",
+    "intro": "Une série photographique sur les architectures contemporaines, où apparaît une figure féminine récurrente vêtue de jaune, ajoutée numériquement. Empruntée au motif romantique du Rückenfigur, elle est seuil et balance. Face à la raison géométrique du bâti, elle introduit la courbe, la douceur, l'organique, et rend ces espaces habitables à hauteur d'humain.",
+    "email": "hey@cedricstoecklin.com"
+  },
+  "meta": {
+    "title": "URBAN YELLOW — Cédric Stoecklin",
+    "description": "Série photographique. 24 fragments d'architectures contemporaines traversés par une figure jaune récurrente.",
+    "keywords": "Cédric Stoecklin, urban yellow, photographie architecture, photographe Annecy, tirage pigmentaire, art contemporain"
+  },
+  "og": {
+    "title": "URBAN YELLOW — Cédric Stoecklin",
+    "description": "Série photographique. 24 fragments d'architectures contemporaines traversés par une figure jaune récurrente."
+  },
+  "twitter": {
+    "title": "URBAN YELLOW — Cédric Stoecklin",
+    "description": "24 fragments d'architectures contemporaines traversés par une figure jaune récurrente."
+  },
+  "nav": {
+    "toggle": "Changer de mode d'affichage",
+    "index": "Grille classique",
+    "parcours": "Grille Interactive"
+  },
+  "gallery": {
+    "title": "Galerie",
+    "hint": "Cliquez pour agrandir"
+  },
+  "timeline": {
+    "collapse": "Réduire"
+  },
+  "lightbox": {
+    "close": "Fermer",
+    "prev": "Précédente",
+    "next": "Suivante"
+  },
+  "footer": {
+    "artist": {
+      "name": "CÉDRIC STOECKLIN",
+      "bio": "Né en 1979, vit et travaille à Annecy"
+    },
+    "sections": {
+      "approach": "Démarche",
+      "public": "Commande publique",
+      "activity": "Activité",
+      "works": "Liste des œuvres",
+      "colophon": "Colophon",
+      "intent": "Note d'intention",
+      "follow": "Suivre",
+      "acquisition": "Acquisition"
+    },
+    "texts": {
+      "approach": "Développe depuis 2020 URBAN YELLOW, recherche photographique personnelle autour de l'insertion d'une figure récurrente dans des architectures contemporaines.",
+      "public": "Déclinaison territoriale de la série URBAN YELLOW, commande acquise par la Communauté d'agglomération Paris-Saclay.",
+      "activity": "Photographe d'architecture et de design depuis 2019, Annecy.",
+      "works_desc": "Photographies, tirages pigmentaires sur papier Hahnemühle. Édition de 13 + 2EA. Formats disponibles: 40×50 cm, 60x75 cm, 80×100 cm et 100x125 cm.",
+      "colophon": "Prises de vue réalisées au format numérique, 2020–2026. Post-production numérique en insertion, tirages calibrés et réalisés en France.",
+      "intent": "URBAN YELLOW prend place dans une photographie contemporaine attentive au construit. La série s'intéresse aux architectures contemporaines, souvent brutalistes ou minimalistes, choisies pour leur géométrie et leur manière de découper la lumière. Le bâti n'y est pas documenté. Il est composé, cadré, traité comme un sujet à part entière.\n\nDans ces architectures apparaît une figure récurrente vêtue de jaune, toujours la même, toujours seule, presque toujours vue de dos. Elle n'est pas photographiée mais ajoutée : chaque image est une composition construite. La figure emprunte au motif du Rückenfigur, cette silhouette de dos héritée de la peinture romantique, transposée ici dans l'architecture contemporaine : un seuil, une présence anonyme, mais aussi une balance sans laquelle la composition ne tiendrait pas.\n\nQu'elle soit une femme n'est pas neutre. Face au bâti, à ses angles, sa raison géométrique, son autorité froide, elle introduit ce qu'il ne porte pas : une courbe, une douceur, quelque chose d'organique et de vivant. Elle ne s'oppose pas à l'architecture, elle la tempère et la rend habitable.",
+      "acquisition": "Tirages disponibles sur commande. Chaque pièce est livrée signée, numérotée et accompagnée d'un certificat d'authenticité.",
+      "cta": "Demander un tirage →"
+    },
+    "bottom": {
+      "rights": "© 2026 Cédric Stoecklin — Tous droits réservés",
+      "series": "Urban Yellow — 24 fragments, 2020–2026"
+    }
+  }
+}

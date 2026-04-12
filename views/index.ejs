@@ -1,66 +1,67 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="<%= lang %>">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>URBAN YELLOW — Cédric Stoecklin, photographie d'architecture</title>
-<meta name="description" content="URBAN YELLOW, série photographique de Cédric Stoecklin : 24 fragments d'architectures contemporaines traversés par une figure jaune récurrente." /><meta name="author" content="Cédric Stoecklin" />
-<meta name="keywords" content="Cédric Stoecklin, urban yellow, photographie architecture, photographe Annecy, tirage pigmentaire, art contemporain" />
-<link rel="canonical" href="https://uy.cedricstoecklin.com" />
+  <title><%= t.meta.title %></title>
+  <meta name="description" content="<%= t.meta.description %>" />
+  <meta name="author" content="Cédric Stoecklin" />
+  <meta name="keywords" content="<%= t.meta.keywords %>" />
+  <link rel="canonical" href="https://uy.cedricstoecklin.com" />
 
-<!-- Open Graph (Facebook, LinkedIn, iMessage, WhatsApp) -->
-<meta property="og:type" content="website" />
-<meta property="og:title" content="URBAN YELLOW — Cédric Stoecklin" />
-<meta property="og:description" content="Série photographique. 24 fragments d'architectures contemporaines traversés par une figure jaune récurrente." />
-<meta property="og:url" content="https://uy.cedricstoecklin.com/" />
-<meta property="og:image" content="https://uy.cedricstoecklin.com/images/og.jpg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:locale" content="fr_FR" />
-<meta property="og:site_name" content="Cédric Stoecklin" />
+  <!-- Open Graph (Facebook, LinkedIn, iMessage, WhatsApp) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="<%= t.og.title %>" />
+  <meta property="og:description" content="<%= t.og.description %>" />
+  <meta property="og:url" content="https://uy.cedricstoecklin.com/" />
+  <meta property="og:image" content="https://uy.cedricstoecklin.com/images/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="Cédric Stoecklin" />
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="URBAN YELLOW — Cédric Stoecklin" />
-<meta name="twitter:description" content="24 fragments d'architectures contemporaines traversés par une figure jaune récurrente." />
-<meta name="twitter:image" content="https://uy.cedricstoecklin.com/images/og.jpg" />
-<!-- Favicon SVG inline, fond jaune + U noir -->
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="<%= t.twitter.title %>" />
+  <meta name="twitter:description" content="<%= t.twitter.description %>" />
+  <meta name="twitter:image" content="https://uy.cedricstoecklin.com/images/og.jpg" />
+  <!-- Favicon SVG inline, fond jaune + U noir -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-<!-- JSON-LD : aide Google à comprendre que c'est un artiste + une œuvre -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Person",
-      "@id": "https://uy.cedricstoecklin.com/#person",
-      "name": "Cédric Stoecklin",
-      "birthDate": "1979",
-      "jobTitle": "Photographe",
-      "url": "https://uy.cedricstoecklin.com/",
-      "email": "hey@cedricstoecklin.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Annecy",
-        "addressCountry": "FR"
+  <!-- JSON-LD : aide Google à comprendre que c'est un artiste + une œuvre -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://uy.cedricstoecklin.com/#person",
+        "name": "Cédric Stoecklin",
+        "birthDate": "1979",
+        "jobTitle": "Photographe",
+        "url": "https://uy.cedricstoecklin.com/",
+        "email": "hey@cedricstoecklin.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Annecy",
+          "addressCountry": "FR"
+        },
+        "sameAs": ["https://www.instagram.com/cedricstoecklin"]
       },
-      "sameAs": ["https://www.instagram.com/cedricstoecklin"]
-    },
-    {
-      "@type": "VisualArtwork",
-      "name": "URBAN YELLOW",
-      "creator": { "@id": "https://uy.cedricstoecklin.com/#person" },
-      "artform": "Photographie",
-      "artMedium": "Tirage pigmentaire sur papier Hahnemühle",
-      "dateCreated": "2020",
-      "description": "Recherche photographique autour de l'insertion d'une figure récurrente dans des architectures contemporaines. 24 pièces réalisées entre 2020 et 2026.",
-      "image": https://uy.cedricstoecklin.com/images/og.jpg",
-      "url": "https://uy.cedricstoecklin.com/"
-    }
-  ]
-}
-</script>
+      {
+        "@type": "VisualArtwork",
+        "name": "URBAN YELLOW",
+        "creator": { "@id": "https://uy.cedricstoecklin.com/#person" },
+        "artform": "Photographie",
+        "artMedium": "Tirage pigmentaire sur papier Hahnemühle",
+        "dateCreated": "2020",
+        "description": "<%= t.meta.description %>",
+        "image": "https://uy.cedricstoecklin.com/images/og.jpg",
+        "url": "https://uy.cedricstoecklin.com/"
+      }
+    ]
+  }
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -78,7 +79,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -91,41 +92,57 @@
 <body class="bg-paper text-ink font-sans antialiased" data-mode="index">
 
   <!-- NAV -->
-<nav class="fixed top-0 left-0 right-0 z-40 px-6 md:px-12 py-5 flex justify-between items-center">
-  <div class="flex items-center gap-4">
-    <span class="nav-title font-display text-2xl font-bold mix-blend-difference text-ink opacity-0 hidden md:inline ml-4 "><a href="#top" class="nav-title pointer-auto"><%= project.title %></a></span>
-  </div>
-  <div class="flex items-center gap-6">
-    <span class="text-xs uppercase tracking-widest mix-blend-difference text-ink hidden md:inline"><%= project.year %></span>
-    <!-- Toggle mode -->
-    <button id="mode-toggle" class="group flex items-center gap-2 text-xs uppercase tracking-widest px-3 py-2 rounded-full border border-ink/20 bg-paper/80 backdrop-blur hover:bg-ink hover:text-paper transition-colors" aria-label="Changer de mode d'affichage">
-      <span class="mode-label-index">Index</span>
-      <span class="mode-label-parcours hidden">Parcours</span>
-      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="transition-transform group-hover:rotate-180">
-        <path d="M3 7h8M7 3v8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-      </svg>
-    </button>
-  </div>
-</nav>
+  <nav class="fixed top-0 left-0 right-0 z-40 px-6 md:px-12 py-5 flex justify-between items-center">
+    <div class="flex items-center gap-4">
+      <span class="nav-title font-display text-2xl font-bold mix-blend-difference text-ink opacity-0 hidden md:inline ml-4 "><a href="#top" class="nav-title pointer-auto"><%= project.title %></a></span>
+    </div>
+    <div class="flex gap-2 text-ink/50">
+      <span class="text-xs tracking-widest px-3 py-2 rounded-full border border-ink/20 bg-paper/80 backdrop-blur">
+
+<a href="/en" class="group text-ink/80 hover:text-ink/100 uppercase">
+  EN<span class="text-ink/25 group-hover:text-ink/100 transition duration-300 lowercase">(glish)</span>
+</a>
+
+/ 
+
+<a href="/" class="group text-ink/80 hover:text-ink/100 uppercase">
+  FR<span class="text-ink/25 group-hover:text-ink/100 transition duration-300 lowercase">(ench)</span>
+</a>
+
+      </span>
+    </div>
+    <div class="flex items-center gap-6">
+      
+      <span class="text-xs uppercase tracking-widest mix-blend-difference text-ink hidden md:inline"><%= project.year %></span>
+      <!-- Toggle mode -->
+      <button id="mode-toggle" class="group flex items-center gap-2 text-xs uppercase tracking-widest px-3 py-2 rounded-full border border-ink/20 bg-paper/80 backdrop-blur hover:bg-ink hover:text-paper transition-colors" aria-label="<%= t.nav.toggle %>">
+        <span class="mode-label-index"><%= t.nav.index %></span>
+        <span class="mode-label-parcours hidden"><%= t.nav.parcours %></span>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="transition-transform group-hover:rotate-180">
+          <path d="M3 7h8M7 3v8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
 
   <!-- HERO -->
   <section class="hero-section min-h-screen flex flex-col justify-end px-6 md:px-12 pb-48 pt-32">
-<p class="hero-tag text-sm uppercase tracking-[0.3em] text-ink/60 mb-6"><%= project.subtitle %> — Cédric Stoecklin · <span class="font-display font-light">2019/2026</span></p>
-<h1 class="hero-title font-display leading-[0.85] tracking-tight text-[clamp(4rem,16vw,18rem)]">
-  <span class="block hero-mask">
-    <span class="inline-block hero-line">
-      <% for (let i = 0; i < project.title.length; i++) { %><span class="hero-char" style="--i:<%= i %>"><%= project.title[i] %></span><% } %>
-    </span>
-  </span>
-</h1>
-<p class="hero-intro max-w-3xl md:mt-24 mt-12 font-display text-xl md:text-2xl leading-snug text-ink/60"><%= project.intro %></p>
+    <p class="hero-tag text-sm uppercase tracking-[0.3em] text-ink/60 mb-6"><%= t.project.subtitle %> — Cédric Stoecklin · <span class="font-display font-light"><%= t.project.year %></span></p>
+    <h1 class="hero-title font-display leading-[0.85] tracking-tight text-[clamp(4rem,16vw,18rem)]">
+      <span class="block hero-mask">
+        <span class="inline-block hero-line">
+          <% for (let i = 0; i < project.title.length; i++) { %><span class="hero-char" style="--i:<%= i %>"><%= project.title[i] %></span><% } %>
+        </span>
+      </span>
+    </h1>
+    <p class="hero-intro max-w-3xl md:mt-24 mt-12 font-display text-xl md:text-2xl leading-snug text-ink/60"><%= t.project.intro %></p>
   </section>
 
   <!-- MODE B : INDEX (masonry) — visible par défaut -->
   <section id="mode-index" class="px-6 md:px-12 pb-32">
-    <div class="flex justify-between items-baseline mb-8  mx-auto">
-      <p class="text-xs uppercase tracking-widest text-ink/50">Galerie</p>
-      <p class="text-xs uppercase tracking-widest text-ink/50">Cliquez pour agrandir</p>
+    <div class="flex justify-between items-baseline mb-8 mx-auto">
+      <p class="text-xs uppercase tracking-widest text-ink/50"><%= t.gallery.title %></p>
+      <p class="text-xs uppercase tracking-widest text-ink/50"><%= t.gallery.hint %></p>
     </div>
 
     <div class="masonry mx-auto">
@@ -136,8 +153,8 @@
             <div class="absolute inset-0 bg-ink/0 group-hover:bg-ink/10 transition-colors"></div>
           </div>
           <figcaption class="mt-2 flex justify-between items-baseline text-xs text-ink/60">
-            <span><%= img.caption %></span>
-            <span class="font-mono"><%= String(i + 1).padStart(2, '0') %> / <%= String(images.length).padStart(2, '0') %></span>
+            <span class="font-mono"><%= img.caption %></span>
+            <span class="font-display"><%= String(i + 1).padStart(2, '0') %> / <%= String(images.length).padStart(2, '0') %></span>
           </figcaption>
         </figure>
       <% }) %>
@@ -187,7 +204,7 @@
 
   <!-- TIMELINE bar — toujours en bas -->
   <aside id="timeline" class="fixed bottom-0 left-0 right-0 z-30 px-4 py-3 bg-paper/90 backdrop-blur-md border-t border-ink/10">
-    <div class="flex items-center gap-3  mx-auto">
+    <div class="flex items-center gap-3 mx-auto">
       <span class="text-[10px] uppercase tracking-widest text-ink/50 font-mono whitespace-nowrap hidden md:inline" id="timeline-counter">01 / <%= String(images.length).padStart(2, '0') %></span>
       <div class="flex-1 overflow-x-auto scrollbar-hide">
         <div class="flex gap-1.5 min-w-max">
@@ -198,15 +215,15 @@
           <% }) %>
         </div>
       </div>
-      <button id="timeline-collapse" class="text-[10px] uppercase tracking-widest text-ink/50 hover:text-ink whitespace-nowrap" aria-label="Replier la timeline">Réduire</button>
+      <button id="timeline-collapse" class="text-[10px] uppercase tracking-widest text-ink/50 hover:text-ink whitespace-nowrap" aria-label="<%= t.timeline.collapse %>"><%= t.timeline.collapse %></button>
     </div>
   </aside>
 
   <!-- LIGHTBOX -->
   <div id="lightbox" class="fixed inset-0 z-50 bg-ink/95 hidden items-center justify-center p-6 md:p-12" role="dialog" aria-modal="true">
-    <button class="absolute top-6 right-6 text-paper/70 hover:text-paper text-2xl" id="lightbox-close" aria-label="Fermer">×</button>
-    <button class="absolute left-6 top-1/2 -translate-y-1/2 text-paper/70 hover:text-paper text-3xl" id="lightbox-prev" aria-label="Précédente">‹</button>
-    <button class="absolute right-6 top-1/2 -translate-y-1/2 text-paper/70 hover:text-paper text-3xl" id="lightbox-next" aria-label="Suivante">›</button>
+    <button class="absolute top-6 right-6 text-paper/70 hover:text-paper text-2xl" id="lightbox-close" aria-label="<%= t.lightbox.close %>">×</button>
+    <button class="absolute left-6 top-1/2 -translate-y-1/2 text-paper/70 hover:text-paper text-3xl" id="lightbox-prev" aria-label="<%= t.lightbox.prev %>">‹</button>
+    <button class="absolute right-6 top-1/2 -translate-y-1/2 text-paper/70 hover:text-paper text-3xl" id="lightbox-next" aria-label="<%= t.lightbox.next %>">›</button>
     <figure class="max-w-[90vw] max-h-[85vh] flex flex-col items-center gap-4">
       <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[75vh] object-contain" />
       <figcaption class="text-paper/70 text-sm flex gap-6">
@@ -217,127 +234,119 @@
   </div>
 
   <!-- FOOTER -->
-<footer class="site-footer border-t border-ink/10 px-6 md:px-12 py-16">
-  <div class="site-footer__inner max-w-[1800px] mx-auto w-full">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-14 text-sm leading-relaxed">
+  <footer class="site-footer border-t border-ink/10 px-6 md:px-12 py-16">
+    <div class="site-footer__inner max-w-[1800px] mx-auto w-full">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-14 text-sm leading-relaxed">
 
-      <!-- COL 1 : bio / démarche -->
-      <div class="space-y-8">
-        <div>
-          <p class="font-display text-xl font-semibold tracking-tight">CÉDRIC STOECKLIN</p>
-          <p class="text-ink/60 mt-1">Né en 1979, vit et travaille à Annecy</p>
-          <p class="mt-3">
-            <a href="https://www.cedricstoecklin.com" target="_blank" rel="noopener" class="underline underline-offset-4 decoration-ink/30 hover:decoration-accent">www.cedricstoecklin.com</a><br />
-            <a href="mailto:hey@cedricstoecklin.com" class="underline underline-offset-4 decoration-ink/30 hover:decoration-accent">hey@cedricstoecklin.com</a>
-          </p>
+        <!-- COL 1 : bio / démarche -->
+        <div class="space-y-8">
+          <div>
+            <p class="font-display text-xl font-semibold tracking-tight"><%= t.footer.artist.name %></p>
+            <p class="text-ink/60 mt-1"><%= t.footer.artist.bio %></p>
+            <p class="mt-3">
+              <a href="https://www.cedricstoecklin.com" target="_blank" rel="noopener" class="underline underline-offset-4 decoration-ink/30 hover:decoration-accent">www.cedricstoecklin.com</a><br />
+              <a href="mailto:hey@cedricstoecklin.com" class="underline underline-offset-4 decoration-ink/30 hover:decoration-accent">hey@cedricstoecklin.com</a>
+            </p>
+          </div>
+
+          <div>
+            <p class="text-[10px] uppercase tracking-[0.2em] text-ink/50 mb-2"><%= t.footer.sections.approach %></p>
+            <p class="text-ink/80">
+              <%- t.footer.texts.approach.replace('URBAN YELLOW', '<span class="font-semibold">URBAN YELLOW</span>') %>
+            </p>
+          </div>
+
+          <div>
+            <p class="text-[10px] uppercase tracking-[0.2em] text-ink/50 mb-2"><%= t.footer.sections.public %></p>
+            <p class="text-ink/80">
+              <span class="font-mono text-ink/50 mr-2">2022</span><%= t.footer.texts.public %>
+            </p>
+          </div>
+
+          <div>
+            <p class="text-[10px] uppercase tracking-[0.2em] text-ink/50 mb-2"><%= t.footer.sections.activity %></p>
+            <p class="text-ink/80">
+              <%= t.footer.texts.activity %>
+            </p>
+          </div>
         </div>
 
+        <!-- COL 2 : liste des œuvres -->
         <div>
-          <p class="text-[10px] uppercase tracking-[0.2em] text-ink/50 mb-2">Démarche</p>
-          <p class="text-ink/80">
-            Développe depuis 2020 <span class="font-semibold">URBAN YELLOW</span>,
-            recherche photographique personnelle autour de l'insertion d'une
-            figure récurrente dans des architectures contemporaines.
+          <p class="text-[10px] uppercase tracking-[0.2em] text-ink/50 mb-4"><%= t.footer.sections.works %></p>
+          <p class="text-ink/70 text-xs leading-relaxed">
+            <%= t.footer.texts.works_desc %>
           </p>
-        </div>
-
-        <div>
-          <p class="text-[10px] uppercase tracking-[0.2em] text-ink/50 mb-2">Commande publique</p>
-          <p class="text-ink/80">
-            <span class="font-mono text-ink/50 mr-2">2022</span>Déclinaison territoriale de la série URBAN YELLOW, commande acquise par la Communauté d'agglomération Paris-Saclay.
-          </p>
-        </div>
-
-        <div>
-          <p class="text-[10px] uppercase tracking-[0.2em] text-ink/50 mb-2">Activité</p>
-          <p class="text-ink/80">
-            Photographe d'architecture et de design depuis 2019, Annecy.
-          </p>
-        </div>
-      </div>
-
-      <!-- COL 2 : liste des œuvres -->
-      <div>
-        <p class="text-[10px] uppercase tracking-[0.2em] text-ink/50 mb-4">Liste des œuvres</p>
-        <p class="text-ink/70 text-xs leading-relaxed">
-          Photographies, tirages pigmentaires sur papier Hahnemühle.
-          Édition de 13 + 2EA. Formats disponibles: 40×50 cm, 60x75 cm, 80×100 cm et 100x125 cm.
-        </p>
-        <ul class="mt-5 divide-y divide-ink/10 font-mono text-[11px] uppercase tracking-wider">
-          <li class="flex justify-between py-2"><span>L'envol</span><span class="text-ink/50">2024</span></li>
-          <li class="flex justify-between py-2"><span>Paix</span><span class="text-ink/50">2022</span></li>
-          <li class="flex justify-between py-2"><span>Convergence</span><span class="text-ink/50">2020</span></li>
-          <li class="flex justify-between py-2"><span>Messe</span><span class="text-ink/50">2026</span></li>
-          <li class="flex justify-between py-2"><span>Accès</span><span class="text-ink/50">2025</span></li>
-          <li class="flex justify-between py-2"><span>La tour</span><span class="text-ink/50">2025</span></li>
-          <li class="flex justify-between py-2"><span>H</span><span class="text-ink/50">2023</span></li>
-          <li class="flex justify-between py-2"><span>Passage</span><span class="text-ink/50">2023</span></li>
-          <li class="flex justify-between py-2"><span>Escalier</span><span class="text-ink/50">2023</span></li>
-          <li class="flex justify-between py-2"><span>Confrontation</span><span class="text-ink/50">2023</span></li>
-          <li class="flex justify-between py-2"><span>Courbes</span><span class="text-ink/50">2022</span></li>
-          <li class="flex justify-between py-2"><span>Galerie</span><span class="text-ink/50">2022</span></li>
-          <li class="flex justify-between py-2"><span>Orange</span><span class="text-ink/50">2022</span></li>
-          <li class="flex justify-between py-2"><span>Pointe</span><span class="text-ink/50">2022</span></li>
-          <li class="flex justify-between py-2"><span>Tiret</span><span class="text-ink/50">2022</span></li>
-          <li class="flex justify-between py-2"><span>Vague</span><span class="text-ink/50">2022</span></li>
-          <li class="flex justify-between py-2"><span>Antenne</span><span class="text-ink/50">2021</span></li>
-          <li class="flex justify-between py-2"><span>De nuit</span><span class="text-ink/50">2021</span></li>
-          <li class="flex justify-between py-2"><span>Passerelle</span><span class="text-ink/50">2021</span></li>
-          <li class="flex justify-between py-2"><span>Réflexion</span><span class="text-ink/50">2021</span></li>
-          <li class="flex justify-between py-2"><span>Z</span><span class="text-ink/50">2021</span></li>
-          <li class="flex justify-between py-2"><span>Bonbon</span><span class="text-ink/50">2020</span></li>
-          <li class="flex justify-between py-2"><span>Infini</span><span class="text-ink/50">2020</span></li>
-          <li class="flex justify-between py-2"><span>///</span><span class="text-ink/50">2020</span></li>
-        </ul>
-      </div>
-
-      <!-- COL 3 : colophon / acquisition -->
-      <div class="space-y-8">
-        <div>
-          <p class="text-[10px] uppercase tracking-[0.2em] text-ink/50 mb-2">Colophon</p>
-          <p class="text-ink/80">
-            Prises de vue réalisées au format numérique, 2020–2026.
-            Post-production numérique en insertion, tirages calibrés et réalisés en France.
-          </p>
-        </div>
-
-
-        <div>
-          <p class="text-[10px] uppercase tracking-[0.2em] text-ink/50 mb-2">Note d'intention</p>
-          <p class="text-ink/80 leading-7"> 
-           <span class="font-bold">URBAN YELLOW </span>prend place dans une photographie contemporaine attentive au construit. La série s'intéresse aux architectures contemporaines, souvent brutalistes ou minimalistes, choisies pour leur géométrie et leur manière de découper la lumière. <br />
-            Le bâti n'y est pas documenté. Il est composé, cadré, traité comme un sujet à part entière.<br />
-            <br />
-            Dans ces architectures apparaît une figure récurrente vêtue de jaune, toujours la même, toujours seule, presque toujours vue de dos. Elle n'est pas photographiée mais ajoutée : chaque image est une composition construite. La figure emprunte au motif du Rückenfigur, cette silhouette de dos héritée de la peinture romantique, transposée ici dans l'architecture contemporaine : un seuil, une présence anonyme, mais aussi une balance sans laquelle la composition ne tiendrait pas.
-            Qu'elle soit une femme n'est pas neutre. Face au bâti, à ses angles, sa raison géométrique, son autorité froide, elle introduit ce qu'il ne porte pas : une courbe, une douceur, quelque chose d'organique et de vivant. Elle ne s'oppose pas à l'architecture, elle la tempère et la rend habitable.
-          </p>
-        </div>
-        <div>
-          <p class="text-[10px] uppercase tracking-[0.2em] text-ink/50 mb-2">Suivre</p>
-          <ul class="space-y-1">
-            <li><a href="https://www.instagram.com/cedricstoecklin_photographe/" class="underline underline-offset-4 decoration-ink/30 hover:decoration-accent">Instagram — @cedricstoecklin</a></li>
+          <ul class="mt-5 divide-y divide-ink/10 font-mono text-[11px] uppercase tracking-wider">
+            <li class="flex justify-between py-2"><span>L'envol</span><span class="text-ink/50">2024</span></li>
+            <li class="flex justify-between py-2"><span>Paix</span><span class="text-ink/50">2022</span></li>
+            <li class="flex justify-between py-2"><span>Convergence</span><span class="text-ink/50">2020</span></li>
+            <li class="flex justify-between py-2"><span>Messe</span><span class="text-ink/50">2026</span></li>
+            <li class="flex justify-between py-2"><span>Accès</span><span class="text-ink/50">2025</span></li>
+            <li class="flex justify-between py-2"><span>La tour</span><span class="text-ink/50">2025</span></li>
+            <li class="flex justify-between py-2"><span>H</span><span class="text-ink/50">2023</span></li>
+            <li class="flex justify-between py-2"><span>Passage</span><span class="text-ink/50">2023</span></li>
+            <li class="flex justify-between py-2"><span>Escalier</span><span class="text-ink/50">2023</span></li>
+            <li class="flex justify-between py-2"><span>Confrontation</span><span class="text-ink/50">2023</span></li>
+            <li class="flex justify-between py-2"><span>Courbes</span><span class="text-ink/50">2022</span></li>
+            <li class="flex justify-between py-2"><span>Galerie</span><span class="text-ink/50">2022</span></li>
+            <li class="flex justify-between py-2"><span>Orange</span><span class="text-ink/50">2022</span></li>
+            <li class="flex justify-between py-2"><span>Pointe</span><span class="text-ink/50">2022</span></li>
+            <li class="flex justify-between py-2"><span>Tiret</span><span class="text-ink/50">2022</span></li>
+            <li class="flex justify-between py-2"><span>Vague</span><span class="text-ink/50">2022</span></li>
+            <li class="flex justify-between py-2"><span>Antenne</span><span class="text-ink/50">2021</span></li>
+            <li class="flex justify-between py-2"><span>De nuit</span><span class="text-ink/50">2021</span></li>
+            <li class="flex justify-between py-2"><span>Passerelle</span><span class="text-ink/50">2021</span></li>
+            <li class="flex justify-between py-2"><span>Réflexion</span><span class="text-ink/50">2021</span></li>
+            <li class="flex justify-between py-2"><span>Z</span><span class="text-ink/50">2021</span></li>
+            <li class="flex justify-between py-2"><span>Bonbon</span><span class="text-ink/50">2020</span></li>
+            <li class="flex justify-between py-2"><span>Infini</span><span class="text-ink/50">2020</span></li>
+            <li class="flex justify-between py-2"><span>///</span><span class="text-ink/50">2020</span></li>
           </ul>
         </div>
-                <div>
-          <p class="text-[10px] uppercase tracking-[0.2em] text-ink/50 mb-2">Acquisition</p>
-          <p class="text-ink/80">
-            Tirages disponibles sur commande. Chaque pièce est livrée signée,
-            numérotée et accompagnée d'un certificat d'authenticité.
-          </p>
-          <a href="mailto:hey@cedricstoecklin.com?subject=URBAN%20YELLOW%20%E2%80%94%20demande%20de%20tirage" class="inline-block mt-4 text-xs uppercase tracking-widest border border-ink/20 px-4 py-2 rounded-full hover:bg-ink hover:text-paper transition-colors">
-            Demander un tirage →
-          </a>
+
+        <!-- COL 3 : colophon / acquisition -->
+        <div class="space-y-8">
+          <div>
+            <p class="text-[10px] uppercase tracking-[0.2em] text-ink/50 mb-2"><%= t.footer.sections.colophon %></p>
+            <p class="text-ink/80">
+              <%= t.footer.texts.colophon %>
+            </p>
+          </div>
+
+          <div>
+            <p class="text-[10px] uppercase tracking-[0.2em] text-ink/50 mb-2"><%= t.footer.sections.intent %></p>
+            <p class="text-ink/80 leading-7"> 
+              <%- t.footer.texts.intent.replace(/\n/g, '<br />').replace('URBAN YELLOW', '<span class="font-bold">URBAN YELLOW</span>') %>
+            </p>
+          </div>
+          
+          <div>
+            <p class="text-[10px] uppercase tracking-[0.2em] text-ink/50 mb-2"><%= t.footer.sections.follow %></p>
+            <ul class="space-y-1">
+              <li><a href="https://www.instagram.com/cedricstoecklin_photographe/" class="underline underline-offset-4 decoration-ink/30 hover:decoration-accent">Instagram — @cedricstoecklin</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <p class="text-[10px] uppercase tracking-[0.2em] text-ink/50 mb-2"><%= t.footer.sections.acquisition %></p>
+            <p class="text-ink/80">
+              <%= t.footer.texts.acquisition %>
+            </p>
+            <a href="mailto:hey@cedricstoecklin.com?subject=URBAN%20YELLOW%20%E2%80%94%20demande%20de%20tirage" class="inline-block mt-4 text-xs uppercase tracking-widest border border-ink/20 px-4 py-2 rounded-full hover:bg-ink hover:text-paper transition-colors">
+              <%= t.footer.texts.cta %>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Bas de footer -->
-    <div class="mt-12 pt-6 border-t border-ink/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-3 text-[11px] uppercase tracking-widest text-ink/50">
-      <span>© 2026 Cédric Stoecklin — Tous droits réservés</span>
-      <span>Urban Yellow — 24 fragments, 2020–2026</span>
+      <!-- Bas de footer -->
+      <div class="mt-12 pt-6 border-t border-ink/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-3 text-[11px] uppercase tracking-widest text-ink/50">
+        <span><%= t.footer.bottom.rights %></span>
+        <span><%= t.footer.bottom.series %></span>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
   <script src="/js/main.js"></script>
 </body>
