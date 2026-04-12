@@ -8,7 +8,17 @@ document.addEventListener('contextmenu', (e) => {
   }
 });
 
-
+document.querySelector('.nav-title').addEventListener('click', (e) => {
+  e.preventDefault();
+  // En mode parcours, scroll-snap peut interférer avec scrollTo smooth
+  // On scrolle vers le hero directement
+  const hero = document.querySelector('.hero-section');
+  if (hero) {
+    hero.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } else {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+});
 
 const IMAGES = JSON.parse(document.getElementById('images-data').textContent);
 const body = document.body;
@@ -20,9 +30,71 @@ const isMobile = window.matchMedia('(max-width: 767px)').matches;
 const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const forceIndex = isMobile || prefersReduced;
 
-// ---------- HERO reveal ----------
-gsap.from('.hero-line', { y: '110%', duration: 1.1, ease: 'expo.out', delay: 0.1 });
-gsap.to('.reveal', { opacity: 1, y: 0, duration: 1, stagger: 0.1, delay: 0.4, ease: 'power2.out' });
+
+
+// ========== HERO reveal ==========
+const heroChars = gsap.utils.toArray('.hero-char');
+
+// Pose les états initiaux avant le premier frame (évite tout flash)
+gsap.set(['.hero-tag', '.hero-intro'], { opacity: 0, y: 20 });
+
+gsap.timeline({ delay: 0.2 })
+  // 1. Lettres du titre : cascade
+  .to(heroChars, {
+    y: 0,
+    opacity: 1,
+    duration: 0.7,
+    ease: 'expo.out',
+    stagger: 0.035,
+  })
+  // 2. Graisse variable : pendant que les dernières lettres montent
+  .to(heroChars, {
+    '--wght': 900,
+    '--opsz': 144,
+    duration: 0.9,
+    ease: 'power3.inOut',
+    stagger: { each: 0.025, from: 'start' },
+    onUpdate: function () {
+      this.targets().forEach((el) => {
+        const w = gsap.getProperty(el, '--wght');
+        const o = gsap.getProperty(el, '--opsz');
+        el.style.fontVariationSettings = `"wght" ${w}, "opsz" ${o}`;
+      });
+    },
+  }, '-=0.3')
+  // 3. Tag : fade + slide up (chevauche la fin de la variation)
+  .to('.hero-tag', {
+    y: 0,
+    opacity: 1,
+    duration: 0.6,
+    ease: 'power2.out',
+  }, '-=0.5')
+  // 4. Intro : fade + slide up (juste après le tag)
+  .to('.hero-intro', {
+    y: 0,
+    opacity: 1,
+    duration: 0.8,
+    ease: 'power2.out',
+  }, '-=0.3');
+
+
+//========= STICKY TITLE ==============
+
+gsap.set(['.nav-title', '.nav-separator'], { x: -10 });
+
+gsap.to(['.nav-separator', '.nav-title'], {
+  opacity: 1,
+  x: 0,
+  duration: 0.5,
+  ease: 'power2.out',
+  stagger: 0.08,
+  scrollTrigger: {
+    trigger: '.hero-title',
+    start: 'bottom top+=80',
+    toggleActions: 'play none none reverse',
+  },
+});
+
 
 // ---------- LIGHTBOX ----------
 const lightbox = document.getElementById('lightbox');

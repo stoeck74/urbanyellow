@@ -173,3 +173,32 @@ body[data-mode="parcours"] .site-footer {
 }
 
 ::selection { background: #ffd60a; color: #0a0a0a; }
+
+/* ========== HERO VARIABLE FONT ========== */
+.hero-title {
+  /* Initial state : lettres invisibles en bas */
+}
+
+.hero-char {
+  display: inline-block;
+  /* Axes variables de Fraunces */
+  font-variation-settings: "wght" 100, "opsz" 9;
+  /* État de départ : translaté en bas, transparent */
+  opacity: 0;
+  transform: translateY(110%);
+  will-change: transform, opacity, font-variation-settings;
+}
+
+/* Gestion espace insécable pour les espaces dans le titre */
+.hero-char:empty::before,
+.hero-char[data-space="true"] { content: "\00a0"; }
+
+.hero-mask {
+  display: block;
+  overflow: hidden;
+  /* Compense la descendeur : on étend la box vers le bas puis on remonte avec un margin négatif */
+  padding-bottom: 0.25em;
+  margin-bottom: -0.25em;
+}
+
+.hero-intro { transform: translateY(30px); }

@@ -78,7 +78,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600;9..144,900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -91,28 +91,34 @@
 <body class="bg-paper text-ink font-sans antialiased" data-mode="index">
 
   <!-- NAV -->
-  <nav class="fixed top-0 left-0 right-0 z-40 px-6 md:px-12 py-5 flex justify-between items-center">
-    <span class="font-display text-xl font-semibold mix-blend-difference text-paper"><%= project.author %></span>
-    <div class="flex items-center gap-6">
-      <span class="text-xs uppercase tracking-widest mix-blend-difference text-paper hidden md:inline"><%= project.year %></span>
-      <!-- Toggle mode -->
-      <button id="mode-toggle" class="group flex items-center gap-2 text-xs uppercase tracking-widest px-3 py-2 rounded-full border border-ink/20 bg-paper/80 backdrop-blur hover:bg-ink hover:text-paper transition-colors" aria-label="Changer de mode d'affichage">
-        <span class="mode-label-index">Index</span>
-        <span class="mode-label-parcours hidden">Parcours</span>
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="transition-transform group-hover:rotate-180">
-          <path d="M3 7h8M7 3v8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-        </svg>
-      </button>
-    </div>
-  </nav>
+<nav class="fixed top-0 left-0 right-0 z-40 px-6 md:px-12 py-5 flex justify-between items-center">
+  <div class="flex items-center gap-4">
+    <span class="nav-title font-display text-2xl font-bold mix-blend-difference text-ink opacity-0 hidden md:inline ml-4 "><a href="#top" class="nav-title pointer-auto"><%= project.title %></a></span>
+  </div>
+  <div class="flex items-center gap-6">
+    <span class="text-xs uppercase tracking-widest mix-blend-difference text-ink hidden md:inline"><%= project.year %></span>
+    <!-- Toggle mode -->
+    <button id="mode-toggle" class="group flex items-center gap-2 text-xs uppercase tracking-widest px-3 py-2 rounded-full border border-ink/20 bg-paper/80 backdrop-blur hover:bg-ink hover:text-paper transition-colors" aria-label="Changer de mode d'affichage">
+      <span class="mode-label-index">Index</span>
+      <span class="mode-label-parcours hidden">Parcours</span>
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="transition-transform group-hover:rotate-180">
+        <path d="M3 7h8M7 3v8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+</nav>
 
   <!-- HERO -->
   <section class="hero-section min-h-screen flex flex-col justify-end px-6 md:px-12 pb-48 pt-32">
-    <p class="hero-tag text-sm uppercase tracking-[0.3em] text-ink/60 mb-6"><%= project.subtitle %> · 2019-2026 · Cédric Stoecklin</p>
-    <h1 class="font-display font-black leading-none tracking-tight text-[clamp(4rem,12vw,16rem)]">
-      <span class="block"><span class="inline-block hero-line"><%= project.title %></span></span>
-    </h1>
-    <p class="reveal max-w-4xl mt-12 font-display text-xl md:text-2xl leading-snug text-ink/80"><%= project.intro %></p>
+<p class="hero-tag text-sm uppercase tracking-[0.3em] text-ink/60 mb-6"><%= project.subtitle %> — Cédric Stoecklin · <span class="font-display font-light">2019/2026</span></p>
+<h1 class="hero-title font-display leading-[0.85] tracking-tight text-[clamp(4rem,16vw,18rem)]">
+  <span class="block hero-mask">
+    <span class="inline-block hero-line">
+      <% for (let i = 0; i < project.title.length; i++) { %><span class="hero-char" style="--i:<%= i %>"><%= project.title[i] %></span><% } %>
+    </span>
+  </span>
+</h1>
+<p class="hero-intro max-w-3xl md:mt-24 mt-12 font-display text-xl md:text-2xl leading-snug text-ink/60"><%= project.intro %></p>
   </section>
 
   <!-- MODE B : INDEX (masonry) — visible par défaut -->
