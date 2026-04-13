@@ -96,24 +96,23 @@
     <div class="flex items-center gap-4">
       <span class="nav-title font-display text-2xl font-bold mix-blend-difference text-ink opacity-0 hidden md:inline ml-4 "><a href="#top" class="nav-title pointer-auto"><%= project.title %></a></span>
     </div>
-    <div class="flex gap-2 text-ink/50">
+
+    <div class="flex items-center gap-6">
+          <div class="flex gap-2 text-ink/50">
       <span class="text-xs tracking-widest px-3 py-2 rounded-full border border-ink/20 bg-paper/80 backdrop-blur">
 
-<a href="/en" class="group text-ink/80 hover:text-ink/100 uppercase">
-  EN<span class="text-ink/25 group-hover:text-ink/100 transition duration-300 lowercase">(glish)</span>
-</a>
+          <a href="/en" class="group text-ink/80 hover:text-ink/100 uppercase">
+            EN<span class="text-ink/25 group-hover:text-ink/100 transition duration-300 lowercase">[glish]</span>
+          </a>
 
-/ 
+          / 
 
-<a href="/" class="group text-ink/80 hover:text-ink/100 uppercase">
-  FR<span class="text-ink/25 group-hover:text-ink/100 transition duration-300 lowercase">(ench)</span>
-</a>
+          <a href="/" class="group text-ink/80 hover:text-ink/100 uppercase">
+            FR<span class="text-ink/25 group-hover:text-ink/100 transition duration-300 lowercase">[ench]</span>
+          </a>
 
-      </span>
+                </span>
     </div>
-    <div class="flex items-center gap-6">
-      
-      <span class="text-xs uppercase tracking-widest mix-blend-difference text-ink hidden md:inline"><%= project.year %></span>
       <!-- Toggle mode -->
       <button id="mode-toggle" class="group flex items-center gap-2 text-xs uppercase tracking-widest px-3 py-2 rounded-full border border-ink/20 bg-paper/80 backdrop-blur hover:bg-ink hover:text-paper transition-colors" aria-label="<%= t.nav.toggle %>">
         <span class="mode-label-index"><%= t.nav.index %></span>
